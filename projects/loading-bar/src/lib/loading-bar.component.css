@@ -1,0 +1,7 @@
+.progressBar {
+  position: absolute;
+  z-index: 1000;
+}
+.mat-progress-bar {
+  height: 3px;
+}
