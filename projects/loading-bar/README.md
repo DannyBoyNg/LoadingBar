@@ -17,6 +17,15 @@ npm install @dannyboyng/loading-bar
 
 ## Usage
 
+Import module
+```typescript
+import { LoadingBarModule } from '@dannyboyng/loading-bar';
+...
+@NgModule({
+  imports: [
+    LoadingBarModule,
+  ],
+```
 Basic
 ```html
 <dbn-loading-bar></dbn-loading-bar>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnDestroy } from '@angular/core';
+import { Component, OnInit, Input, OnDestroy, ChangeDetectorRef } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { LoadingBarService } from './loading-bar.service';
 import { LoadingBarState } from './loading-bar.interfaces';
@@ -16,7 +16,8 @@ export class LoadingBarComponent implements OnInit, OnDestroy {
   private subscription: Subscription|undefined;
 
   constructor(
-    private loadingBarService: LoadingBarService
+    private loadingBarService: LoadingBarService,
+    private ref: ChangeDetectorRef,
   ) { }
 
   ngOnInit() {
@@ -30,9 +31,11 @@ export class LoadingBarComponent implements OnInit, OnDestroy {
       switch (x.state) {
         case 'show':
           this.referenceCounter++;
+          this.ref.markForCheck();
           break;
         case 'hide':
           if (this.referenceCounter > 0) {this.referenceCounter--; }
+          this.ref.markForCheck();
           break;
       }
     });
