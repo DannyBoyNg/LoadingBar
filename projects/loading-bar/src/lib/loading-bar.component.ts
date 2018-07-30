@@ -31,10 +31,12 @@ export class LoadingBarComponent implements OnInit, OnDestroy {
       switch (x.state) {
         case 'show':
           this.referenceCounter++;
+          this.ref.detectChanges();
           this.ref.markForCheck();
           break;
         case 'hide':
           if (this.referenceCounter > 0) {this.referenceCounter--; }
+          this.ref.detectChanges();
           this.ref.markForCheck();
           break;
       }
