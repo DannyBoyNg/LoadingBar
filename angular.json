@@ -65,7 +65,14 @@
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
             }
           }
         },
@@ -120,6 +127,7 @@
     "LoadingBarApp-e2e": {
       "root": "e2e/",
       "projectType": "application",
+      "prefix": "",
       "architect": {
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
@@ -144,22 +152,17 @@
         }
       }
     },
-    "LoadingBar": {
+    "loadingBar": {
       "root": "projects/loading-bar",
       "sourceRoot": "projects/loading-bar/src",
       "projectType": "library",
-      "prefix": "lib",
+      "prefix": "dbn",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
             "tsConfig": "projects/loading-bar/tsconfig.lib.json",
             "project": "projects/loading-bar/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "project": "projects/loading-bar/ng-package.prod.json"
-            }
           }
         },
         "test": {

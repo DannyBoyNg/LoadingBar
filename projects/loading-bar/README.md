@@ -4,8 +4,8 @@ An Angular library to display a loading bar to indicate that the app is busy
 
 ## Dependancies
 
-@angular/cdk ^6.3.0  
-@angular/material ^6.3.0  
+@angular/cdk >=6.0.0  
+@angular/material >=6.0.0  
 
 ## Installing
 
