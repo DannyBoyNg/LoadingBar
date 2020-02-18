@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LoadingBarService } from 'projects/loading-bar/src/public_api';
+import { LoadingBarService } from 'projects/loading-bar/src/public-api';
 
 @Component({
   selector: 'app-root',
@@ -19,4 +19,5 @@ export class AppComponent {
 
   resetAll() {
     this.loadingBar.resetAll();
-  }}
+  }
+}

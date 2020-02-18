@@ -1,7 +1,7 @@
 {
   "name": "@dannyboyng/loading-bar",
   "description": "An Angular library to display a loading bar to indicate that the app is busy",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "license" : "MIT",
   "keywords": [
     "loader",
@@ -15,9 +15,9 @@
     "url": "https://github.com/DannyBoyNg/LoadingBar.git"
   },
   "peerDependencies": {
-    "@angular/common": ">=6.0.0 <9.0.0",
-    "@angular/core": ">=6.0.0 <9.0.0",
-    "@angular/material": ">=6.0.0 <9.0.0",
-    "@angular/cdk": ">=6.0.0 <9.0.0"
+    "@angular/common": ">=6.0.0 <12.0.0",
+    "@angular/core": ">=6.0.0 <12.0.0",
+    "@angular/material": ">=6.0.0 <12.0.0",
+    "@angular/cdk": ">=6.0.0 <12.0.0"
   }
 }

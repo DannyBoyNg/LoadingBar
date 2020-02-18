@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { Subject, Observable } from 'rxjs';
 import { LoadingBarState } from './loading-bar.interfaces';
 
 @Injectable({
@@ -14,7 +14,7 @@ export class LoadingBarService {
 
   show(id?: string) {
     const ls: LoadingBarState = {
-      id: id,
+      id,
       state: 'show'
     };
     this.loadingBarSubject.next(ls);
@@ -22,7 +22,7 @@ export class LoadingBarService {
 
   hide(id?: string) {
     const ls: LoadingBarState = {
-      id: id,
+      id,
       state: 'hide'
     };
     this.loadingBarSubject.next(ls);

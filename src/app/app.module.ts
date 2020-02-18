@@ -2,7 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { LoadingBarModule } from 'projects/loading-bar/src/public_api';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoadingBarModule } from 'projects/loading-bar/src/public-api';
 
 @NgModule({
   declarations: [
@@ -10,6 +11,7 @@ import { LoadingBarModule } from 'projects/loading-bar/src/public_api';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     LoadingBarModule,
   ],
   providers: [],
